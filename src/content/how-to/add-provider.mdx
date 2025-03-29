@@ -1,0 +1,34 @@
+import { Steps } from "nextra/components";
+
+# Add Provider
+
+To add a new provider
+
+<Steps>
+### Step 1
+Go to `packages/backend/generations/providers` and create a new file: `name.provider.ts`
+
+### Step 2
+Edit `packages/backend/generations/generation.identifiers.ts` and add your new provider name
+
+### Step 3
+Add the following code inside:
+```typescript
+import { GenerationIdentifiers } from "@packages/backend/generations/generation.identifiers";
+import { GenerationCategory } from "@packages/backend/generations/generation.category";
+import { Input } from "@packages/backend/generations/generation.base.interface";
+import { GenerationBase } from "@packages/backend/generations/generation.base";
+
+export class OpenaiProvider extends GenerationBase {
+    docsLink = "link to the new provider docs";
+    identifier = GenerationIdentifiers.NEW_PROVIDER_NAME;
+    models = [];
+}
+```
+
+### Step 4
+Implement all the providers function, you can look at other providers
+
+### Step 5
+Edit `packages/backend/generations/providers.list.ts` and add the new provider
+</Steps>

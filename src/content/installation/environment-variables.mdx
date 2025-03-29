@@ -1,0 +1,73 @@
+import { Table } from "nextra/components";
+
+# Environment Variables
+<br />
+<div>
+  <Table>
+    <thead>
+      <Table.Tr>
+        <Table.Th className="w-full">Name</Table.Th>
+        <Table.Th>Identifier</Table.Th>
+        <Table.Th>Description</Table.Th>
+      </Table.Tr>
+    </thead>
+    <tbody>
+      <Table.Tr>
+        <Table.Td>Database URL</Table.Td>
+        <Table.Td>DATABASE_URL</Table.Td>
+        <Table.Td>URL to the postgres database</Table.Td>
+      </Table.Tr>
+      <Table.Tr>
+          <Table.Td>Auth Secret</Table.Td>
+          <Table.Td>AUTH_SECRET</Table.Td>
+          <Table.Td>Random string used for auth.js</Table.Td>
+      </Table.Tr>
+      <Table.Tr>
+          <Table.Td>Redis URL</Table.Td>
+          <Table.Td>REDIS_URL</Table.Td>
+          <Table.Td>URL to redis</Table.Td>
+      </Table.Tr>
+      <Table.Tr>
+          <Table.Td>Storage Provider</Table.Td>
+          <Table.Td>STORAGE_PROVIDER</Table.Td>
+          <Table.Td>local or cloudflare</Table.Td>
+      </Table.Tr>
+      <Table.Tr>
+          <Table.Td>Upload Directory</Table.Td>
+          <Table.Td>UPLOAD_DIRECTORY</Table.Td>
+          <Table.Td>Required when using local in STORAGE_PROVIDER</Table.Td>
+      </Table.Tr>
+      <Table.Tr>
+          <Table.Td>Cloudflare account id</Table.Td>
+          <Table.Td>CLOUDFLARE_ACCOUNT_ID</Table.Td>
+          <Table.Td>Required when using cloudflare as STORAGE_PROVIDER</Table.Td>
+      </Table.Tr>
+      <Table.Tr>
+          <Table.Td>Cloudflare access key</Table.Td>
+          <Table.Td>CLOUDFLARE_ACCESS_KEY</Table.Td>
+          <Table.Td>Required when using cloudflare as STORAGE_PROVIDER</Table.Td>
+      </Table.Tr>
+      <Table.Tr>
+          <Table.Td>Cloudflare secret access key</Table.Td>
+          <Table.Td>CLOUDFLARE_SECRET_ACCESS_KEY</Table.Td>
+          <Table.Td>Required when using cloudflare as STORAGE_PROVIDER</Table.Td>
+      </Table.Tr>
+      <Table.Tr>
+          <Table.Td>Cloudflare bucket name</Table.Td>
+          <Table.Td>CLOUDFLARE_BUCKETNAME</Table.Td>
+          <Table.Td>Required when using cloudflare as STORAGE_PROVIDER</Table.Td>
+      </Table.Tr>
+      <Table.Tr>
+          <Table.Td>Cloudflare bucket url</Table.Td>
+          <Table.Td>CLOUDFLARE_BUCKET_URL</Table.Td>
+          <Table.Td>Required when using cloudflare as STORAGE_PROVIDER</Table.Td>
+      </Table.Tr>
+      <Table.Tr>
+          <Table.Td>Cloudflare Region</Table.Td>
+          <Table.Td>CLOUDFLARE_REGION</Table.Td>
+          <Table.Td>Required when using cloudflare as STORAGE_PROVIDER</Table.Td>
+      </Table.Tr>
+    </tbody>
+
+  </Table>
+</div>

@@ -1,0 +1,46 @@
+import { Steps, Callout } from "nextra/components";
+import {ConfigureEnv} from "../../components/configure.env";
+
+# Development
+
+Docker compose it's the easiest way to install Agent Heroes on your computer.
+
+<Callout type="warning" emoji="⚠️">
+Please be advised that when saving files to local system<br />
+You might encounter problems when the project run locally because pictures can't be accessed publicly.<br />
+For development it's recommended to use cloudflare
+</Callout>
+
+<Steps>
+### Step 1
+Simply clone Agent Heroes to your computer by running:
+```bash
+git clone https://github.com/agentheroes/agentheroes
+```
+
+### Step 2
+
+Install the project with pnpm
+
+```bash
+pnpm install
+```
+
+### Step 3
+Copy .env.example to .env and configure it
+
+```bash
+cp .env.example .env
+```
+
+### Step 4
+Run the project
+
+```bash
+pnpm run dev
+```
+
+You can now access the frontend on port 4200.<br />
+</Steps>
+
+<ConfigureEnv />

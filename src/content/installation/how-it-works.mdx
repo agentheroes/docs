@@ -1,0 +1,31 @@
+# How it works
+We have tried to make the project as easy as possible to run.<br />
+The system allows you to generate pictures, create videos and automate them on social media.<br />
+We are using 3rd party services to generate the content such as: OpenAI, Fal.ai, Replicate and Runwayml.<br />
+<strong>(In the future local services such as ComfyUI)</strong>
+
+### Each 3rd part provider can:
+- Generate pictures
+- Train LoRA models
+- Generate LoRA pictures
+- Generate videos
+- Generate texts
+
+Agent Heroes create a singular interface between all the services.<br />
+You can configure the APIs of all the services as a Superadmin once you deploy the system.
+
+## Infrastructure
+The entire project is a pnpm monorepo (workspaces) and contains the following services:
+- Backend is built with NestJS (default port 3000)
+- Worker is built with NestJS
+- Frontend is built with NextJS (default port 4200)
+
+They are all contained inside of a docker, the backend is proxied into the frontend for easier installation:
+<strong>{"http://localhost:3000/*"}</strong> ->> <strong>{"http://locahost:4200/v1/api/*"}</strong><br />
+You can later just proxy port 4200 (with a reverse proxy).
+
+We are also using Redis and Postgres for the queue and saving all the information.
+
+<div className="flex">
+  <img src="/services.svg" className="h-[800px]" />
+</div>

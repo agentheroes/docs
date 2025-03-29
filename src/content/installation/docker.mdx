@@ -1,0 +1,23 @@
+import {ConfigureEnv} from "../../components/configure.env";
+
+# Docker Standalone
+
+Docker standalone works best when you try to connect your docker to an existing system (Redis / Postgres) etc.<br />
+You will need to configure your environment variables.
+
+To start a docker standalone use the following command:
+
+```
+docker run \
+  --rm \
+  -p 4200:4200 \
+  -e "DATABASE_URL=postgresql://postgres:postgres@postgres:5432/agentheroes"
+  -e "REDIS_URL=redis://redis:6379"
+  -e "AUTH_SECRET=frjO/rySj/c8YF87JNH/aMsHQiZfwNgBeRuXpM8S7NI="
+  -e "STORAGE_PROVIDER=local"
+  -e "UPLOAD_DIRECTORY=/uploads"
+  -e "WEBSITE_URL=https://dashboard.yourwebsite.com"
+  ghcr.io/agentheroes/agentheroes
+```
+
+<ConfigureEnv />

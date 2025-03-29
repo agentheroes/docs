@@ -1,0 +1,40 @@
+import { Steps, Callout } from "nextra/components";
+import {ConfigureEnv} from "../../components/configure.env";
+
+# Docker Compose
+
+Docker compose it's the easiest way to install Agent Heroes on your computer.
+
+<Callout type="warning" emoji="⚠️">
+Please be advised that by default the docker-compose is set to use your local system to save files.<br />
+You might encounter problems when the project run locally because pictures can't be accessed publicly.<br />
+Either use cloudflare or deploy the project on a public server.
+</Callout>
+
+<Steps>
+### Step 1
+Simply clone Agent Heroes to your computer by running:
+```bash
+git clone https://github.com/agentheroes/agentheroes
+```
+
+### Step 2
+
+From inside the folder run docker-compose
+
+```bash
+docker-compose up
+```
+
+### Step 3
+
+You can now access the system on port 4200.<br />
+If you are using the server publicly, you would need to reverse proxy port 4200 to 80 or 443.
+</Steps>
+
+<Callout type="info" emoji="ℹ️">
+If you want to modify some of the environment variables,<br />
+it's better to copy the .env.example to .env and modify the .env file.
+</Callout>
+
+<ConfigureEnv />

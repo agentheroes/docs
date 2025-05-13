@@ -9,7 +9,6 @@ export const ConfigureEnv: FC = () => {
       <br /><br />
       <Cards.Card
         title="Check it here"
-        className="bg-[#071230] border-white"
         href="/installation/environment-variables"
       /><br />
     </Callout>
